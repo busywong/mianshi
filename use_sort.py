@@ -40,7 +40,15 @@ def main():
     # r = case_insensitive_sort2(list('string'))
     # print(r)
     # sort_list()
-    len_sort()
+    # len_sort()
+    str_sort()
+
+def srt_sort1():
+    a = 'string'
+    la = list(a)
+    la.sort()
+    print("".join(la))
+
 if __name__ == "__main__":
     main()
 
