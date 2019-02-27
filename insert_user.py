@@ -16,20 +16,21 @@ def get_user_col():
     return user_col
     # for user in cursor:
     #     print(user)
-def insert_user(name):
+def insert_user():
 
     user_col = get_user_col()
     name_list = get_name()
     for name in name_list:
         res = user_col.insert_one({'name': name, 'password':'123456'})
-        print(res.raw_result)
+        # print(res.raw_result)
 def main():
     # conn_mongo()
-    # insert_user("wjw2")
-    user_col = get_user_col()
-    res = user_col.insert_one({'name': 'wx1', 'password': '123456'})
-    print(res.inserted_id)
-    res.raw_result
+
+    # user_col = get_user_col()
+    insert_user()
+    # res = user_col.insert_one({'name': 'wx1', 'password': '123456'})
+    # print(res.inserted_id)
+    # res.raw_result
 
 if __name__ == "__main__":
     main()
